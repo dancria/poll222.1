@@ -6,14 +6,15 @@
   <select id="findAll" resultType="com.briup.apps.poll.bean.User">
     select * from poll_user
   </select>
-  <delete id="deleteById" parameterType="com.briup.apps.poll.bean.Course">
-  delete from poll_course where id=#{id}
+  <delete id="deleteById" parameterType="com.briup.apps.poll.bean.User">
+  delete from poll_user where id=#{id}
   </delete>
-  <insert id="save" parameterType="com.briup.apps.poll.bean.Course">
-  insert into poll_course values(null,#{name},#{description},#{period})
+  <insert id="save" parameterType="com.briup.apps.poll.bean.User">
+  insert into poll_user values(null,#{name},#{gender},#{birth},#{hiredate},#{type})
   </insert>
-  <update id="update" parameterType="com.briup.apps.poll.bean.Course">
-  update poll_course set name=#{name},description=#{description},period=#{period}
+  <update id="update" parameterType="com.briup.apps.poll.bean.User">
+  update poll_user set 
+  name=#{name},gender=#{gender},birth=#{birth},hiredate=#{hiredate},type=#{type}
   where id=#{id}
   </update>
 </mapper>
