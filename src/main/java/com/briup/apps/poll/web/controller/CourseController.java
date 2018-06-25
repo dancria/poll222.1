@@ -16,6 +16,7 @@ import io.swagger.annotations.ApiOperation;
 @Api(description="课程相关api,接口")
 @RestController//增删改查服务
 @RequestMapping("/course")//请求映射，/代表根目录
+//controller对接前端
 public class CourseController {
 	@Autowired//自动注入
 	private ICourseService courseService;
